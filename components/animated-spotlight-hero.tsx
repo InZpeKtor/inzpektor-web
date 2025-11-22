@@ -1,7 +1,7 @@
 "use client"
 
-import { useState, useRef, useEffect } from "react"
-import { motion, useMotionValue, useTransform } from "framer-motion"
+import { useState, useRef } from "react"
+import { motion, useMotionValue } from "framer-motion"
 import { BackgroundEffects } from "./shared/solution-hero-background"
 import { useGravityEffect } from "@/hooks/use-gravity-effect"
 import { useInitElasticBoxPositions } from "@/hooks/use-init-elastic-box-positions"

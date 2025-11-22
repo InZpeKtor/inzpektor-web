@@ -42,7 +42,7 @@ export function HeroSection() {
                 Open Minting Dashboard
               </Button>
               <a href="#" className="text-sm text-slate-500 underline hover:text-slate-900">
-                Here's what you can do with your Passport.
+                Here&apos;s what you can do with your Passport.
               </a>
             </div>
 

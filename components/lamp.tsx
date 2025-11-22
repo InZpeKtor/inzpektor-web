@@ -12,7 +12,7 @@ interface LampProps {
   onCordPull: () => void
 }
 
-export function Lamp({ x, y, rotation, anchor, isLightOn, onPointerDown, onCordPull }: LampProps) {
+export function Lamp({ x, y, rotation, anchor, onPointerDown, onCordPull }: LampProps) {
   return (
     <>
       <svg className="absolute inset-0 w-full h-full pointer-events-none z-10" style={{ overflow: "visible" }}>

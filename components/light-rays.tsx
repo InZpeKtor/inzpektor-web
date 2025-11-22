@@ -46,7 +46,7 @@ const LightRays: React.FC<LightRaysProps> = ({
   raysOrigin = "top-center", raysColor = DEFAULT_COLOR, raysSpeed = 1, lightSpread = 1, rayLength = 2, pulsating = false, fadeDistance = 1.0, saturation = 1.0, mouseInfluence = 0.1, noiseAmount = 0.0, distortion = 0.0, className = "", introAnimation = true, dynamicOrigin = null,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null)
-  const uniformsRef = useRef<Record<string, { value: any }> | null>(null)
+  const uniformsRef = useRef<Record<string, { value: unknown }> | null>(null)
   const rendererRef = useRef<Renderer | null>(null)
   const [isVisible, setIsVisible] = useState(false)
   const observerRef = useRef<IntersectionObserver | null>(null)
@@ -119,8 +119,8 @@ const frag = `precision highp float; uniform float iTime; uniform vec2 iResoluti
       updatePlacement()
       animationId = requestAnimationFrame(loop)
       
-      const unsubX = dynamicOrigin?.x.onChange(v => { if (uniformsRef.current) uniformsRef.current.rayPos.value[0] = v * renderer.dpr })
-      const unsubY = dynamicOrigin?.y.onChange(v => { if (uniformsRef.current) uniformsRef.current.rayPos.value[1] = v * renderer.dpr })
+      const unsubX = dynamicOrigin?.x.onChange(v => { if (uniformsRef.current) (uniformsRef.current.rayPos.value as number[])[0] = v * renderer.dpr })
+      const unsubY = dynamicOrigin?.y.onChange(v => { if (uniformsRef.current) (uniformsRef.current.rayPos.value as number[])[1] = v * renderer.dpr })
 
       cleanupFunction = () => {
         cancelAnimationFrame(animationId)
