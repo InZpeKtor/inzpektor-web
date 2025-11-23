@@ -1,5 +1,6 @@
 import HeroSection from "@/components/hero-landing"
 import { LightWidget } from "@/components/light-widget"
+import DocumentationCTA from "@/components/documentation-cta"
 
 /**
  * Home page component for the INZPEKTOR web application.
@@ -72,6 +73,9 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* Documentation CTA Section */}
+        <DocumentationCTA />
       </div>
     </main>
   )
